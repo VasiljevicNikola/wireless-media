@@ -4,7 +4,8 @@
   --zelena:#81b36e;
   --zelenoplava:#429099;
   --plava:#1375b8;
-  --siva:#a1a3a6;
+  --siva:#f3f3f3;
+  --tamnosiva:#9d9d9c;
 
 }
 html, body, *{
@@ -16,8 +17,26 @@ html, body, *{
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
-* h1,h2,h3,p{
-  color: var(--siva)
+* h1,h2,h3,p,a{
+  font-weight: lighter;
+  color: var(--tamnosiva)
+}
+ h1{
+    font-size: 46px;
+    line-height: 66px;
+}
+h2{
+  /* clear: both;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: lighter; */
+}
+h3{
+  font-size: 18px
+}
+p{
+  font-size: 12px;
+  font-weight: lighter;
 }
 * ul{
   list-style: none;
@@ -25,14 +44,39 @@ html, body, *{
 }
 * a{
   text-decoration: none;
-  color: var(--siva)
+}
+.home:hover{
+  color: var(--zutozelena)
+}
+.about:hover{
+  color: var(--zelena)
+}
+.work:hover{
+  color: var(--zelenoplava)
+}
+.contact:hover{
+  color: var(--plava)
+}
+button{
+  box-shadow: none;
+  border: none;
+  background: #f3f3f4;
+  color: var(--tamnosiva);
+  font-size: 10px;
+  padding: 2px;
+  float: right;
+}
+button:hover{
+  cursor: pointer;
+  color: white;
+  background: var(--zutozelena)
 }
 .wrapper{
   width: 768px;
   margin: auto ;
 }
 /* Header start*/
-.header{
+header{
   clear: both;
   width: 100%;
   padding-top:25px;
@@ -46,14 +90,14 @@ html, body, *{
 .logo img{
   width: 100%
 }
-.header nav .nav{
-  margin: 15px 0px 0px 60px;
+nav .nav{
+  margin: 15px 0px 0px 100px;
   float: left;
 }
-.header nav .nav ul{
+ nav .nav ul{
   line-height: 100%;
 }
-.header nav .nav ul li{
+ nav .nav ul li{
   transition: 1.1s all ease;
   padding: 5px;
   float: left;
@@ -61,6 +105,10 @@ html, body, *{
   font-weight: 300;
   font-size: 16px;
 }
+router-link:hover,{
+    color:  var(--zelena);
+    cursor: pointer;
+  }
 .line{
   clear: both;
   height: 12px;
@@ -75,21 +123,35 @@ html, body, *{
   float: right;
   margin: 20px 30px;
 }
+.search:hover{
+  cursor: pointer;
+}
+.search-input{
+  position: absolute;
+  top: 70px;
+  right: 400px;
+  width: 320px;
+  padding: 2px;
+  font-size: 12px;
+
+}
 /* header end */
 
 /* hero start */
 .hero{
-  position: absolute;
-  line-height: 310px;
-  text-align: justify;
-  clear: both;
-  overflow: hidden;
-  background: #f3f3f3;
-  width: 768px;
-  height: 310px;
+z-index:-1;
+clear: both;
+position: relative;
+background-position: center center;
+background: var(--siva);
+background-size: cover;
+width: 100%;
+height: 310px;
+margin-bottom: 40px;
 }
 .hero .tackice{
-  margin-top: 75px;
+  position: relative;
+  top: 80px;
 }
 .hero .icon{
   position: absolute;
@@ -106,13 +168,117 @@ html, body, *{
   margin-top: 20px;
   text-align: left;
   float: right;
-  width: 330px;
-
+  width: 340px;
 }
-.tekst h1{
-    letter-spacing: -2px;
-    font-size: 46px;
-    font-weight: lighter;
-    line-height: 66px;
+.dots{
+  width: 60px;
+  left: 355px;
+  position: absolute;
+  bottom: 15px
+}
+.dot{
+  background: var(--tamnosiva);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin: 5px;
+}
+.dot:nth-child(1){
+  background: var(--zutozelena)
 }
 /* hero edn */
+
+/* main start */
+.main {
+  width: 420px;
+  clear: both;
+  margin: auto;
+}
+.second{
+  clear: both;
+  overflow: hidden;
+}
+.main .slika{
+  text-align: center;
+  line-height: 140px;
+  color: white;
+  margin: 20px 0;
+  background: var(--siva);
+  float: left;
+  width: 180px;
+  height: 110px;
+}
+.main .opis{
+  position: relative;
+  color: white;
+  margin: 20px 0;
+  float: right;
+  width: 180px;
+  height: 110px;
+}
+.main img{
+  width: 50px;
+  margin: auto;
+}
+.main img:hover{
+  cursor: pointer;
+}
+.second .slika:nth-child(2n+1){
+  float: right;
+}
+.second{
+  clear: both;
+  overflow: hidden;
+}
+/* main end */
+
+/* footer start */
+.footer{
+  margin-top: 100px;
+  padding: 0 40px;
+  clear: both;
+  overflow: hidden;
+  background: var(--siva);
+  height: 60px;
+}
+.left-pics{
+  width: 200px;
+  float: left;
+}
+.footer  .nav{
+  margin-left: 70px;
+}
+.footer nav .nav ul li{
+    font-size: 12px;
+}
+.footer nav .nav {
+    margin-top: 20px;
+}
+
+.right-pics{
+  float: right;
+}
+.pics{
+  text-align: center;
+  float: left;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+}
+.pics img{
+  margin: 7px auto;
+  height: 25px;
+}
+.pics img:hover{
+  cursor: pointer;
+}
+/* footer end */
+@media screen and (max-width:480px) {
+
+}
+@media screen and (max-width:320px) {
+
+}
