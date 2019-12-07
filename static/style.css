@@ -26,10 +26,7 @@ html, body, *{
     line-height: 66px;
 }
 h2{
-  /* clear: both;
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: lighter; */
+
 }
 h3{
   font-size: 18px
@@ -91,7 +88,7 @@ header{
   float: left;
   width: 150px;
   height: 50px;
-  margin:0 0 25px 25px;
+  margin:0 0 30px 25px;
 }
 .logo img{
   width: 100%
@@ -334,8 +331,8 @@ h1{
   top: 30px;
 }
 .search-input input{
-  top: 60px;
-  right: 0;
+  top: 70px;
+  right: 0px;
 }
 .dots{
   left: 210px;
@@ -345,6 +342,10 @@ h1{
 }
 }
 @media screen and (max-width:320px) {
+  .search-input input{
+    width: 250px;
+    right: 20px;
+  }
   .footer{
     margin-top: 40px
   }
@@ -440,19 +441,23 @@ h1{
   .mob{
     height: 30px;
     width: fit-content;
-    float: left;
-    margin: 10px 0 0 100px;
+    float: right;
+    margin: 10px 40px;
   }
   .icon-mob{
    width: 30px;
    float: left;
+  }
+  .icon-mob i:hover{
+   color: var(--zutozelena);
+   cursor: pointer;
   }
 .icon-mob p{
   font-size: 20px;
 }
   .search img{
     width: 18px;
-    margin: 0;
+    margin:1px 0 0;
   }
   #navmob{
   width: 100%;
@@ -465,6 +470,7 @@ h1{
 
 }
 #navmob li{
+  color: white;
   width: 100%;
   transition: 1.3s all ease;
   padding: 10px;
@@ -473,25 +479,21 @@ h1{
   font-weight: 300;
   font-size: 20px;
 }
-#navmob li:nth-child(1){
+#navmob .home{
   background: var(--zutozelena)
 }
-#navmob li:nth-child(2):hover{
+#navmob .about{
   background: var(--zelena)
 }
-#navmob li:nth-child(3){
+#navmob .work{
   background: var(--zelenoplava)
 }
-#navmob li:nth-child(4){
+#navmob .contact{
   background: var(--plava)
 }
 #navmob li:hover:{
-  color: white;
-  background-color:var(--crvena);
-}
-#navmob li:active{
-  color: white;
-  background-color:var(--crvena);
+
+   color: white
 }
 
 }

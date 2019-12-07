@@ -34,27 +34,29 @@
           </div>
         </div>
       </nav>
-
+      <div v-if="find" class="search-input">
+        <input type="text" name="" value="" v-model="searching">
+      </div>
       <nav class="mob">
         <div class="icon-mob">
             <p @click="mob=!mob"><i class="fa fa-bars"></i> </p>
           </div>
           <div v-if="mob" id="navmob" class="animated slideInDown">
                 <ul>
-                  <router-link  to="/"><li class="home"> HOME / </li></router-link>
-                  <router-link to="/"><li class="about"> ABOUT US / </li></router-link>
-                  <router-link  to="/"> <li class="work">OUR WORK / </li></router-link>
-                  <router-link  to="/"><li class="contact"> CONTACT</li></router-link>
+                  <router-link  to="/"><li @click="mob = false" class="home"> HOME</li></router-link>
+                  <router-link to="/"><li @click="mob = false" class="about"> ABOUT US</li></router-link>
+                  <router-link  to="/"> <li @click="mob = false" class="work">OUR WORK</li></router-link>
+                  <router-link  to="/"><li @click="mob = false" class="contact"> CONTACT</li></router-link>
                 </ul>
         </div>
         <div class="search">
           <img  class="ser" v-show="!search" @mouseover="search = true"  src="static/imgs/search.png" alt="">
           <img  class="ser" v-show="search" @mouseleave="search = false" @click="findsomething($event)" src="static/imgs/search-z.png" alt="">
-          <div v-if="find" class="search-input">
-            <input type="text" name="" value="" v-model="searching">
-          </div>
-        </div>
 
+        </div>
+        <div v-if="find" class="search-input">
+          <input type="text" name="" value="" v-model="searching">
+        </div>
       </nav>
 
 
