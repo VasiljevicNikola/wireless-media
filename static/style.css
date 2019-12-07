@@ -170,6 +170,9 @@ margin-bottom: 40px;
     width: 170px;
     float: left;
 }
+.tekst-mob{
+  display: none
+}
 .icon .tekst{
   margin-top: 20px;
   text-align: left;
@@ -342,14 +345,74 @@ h1{
 }
 }
 @media screen and (max-width:320px) {
+  .footer{
+    margin-top: 40px
+  }
+  .first{
+    margin-bottom: 20px
+  }
+  .second .slika:nth-child(2n+1) {
+    float: none;
+  }
+  .wrapper{
+    width: 320px;
+  }
+  .opis-2{
+    display: none
+  }
+  .main{
+    width: 320px;
+    margin: auto;
+    text-align: center;
+  }
+  .main .slika{
+    margin: 20px auto;
+    float: none;
+  }
+  .main .opis{
+    text-align: left;
+    margin: auto;
+    overflow: hidden;
+    float: none;
+    height: auto;
+  }
   .icon img{
     width: 100px
+  }
+  .hero{
+    margin-bottom: 0
   }
   .hero .tackice {
     top: 20px
   }
   .hero .tackice img{
     width: 320px
+  }
+  .tekst-mob{
+    border-bottom: 1px solid var(--tamnosiva);
+    border-top: 1px solid var(--tamnosiva);
+    height: 50px;
+    text-align: center;
+    display: block;
+    width: 320px;
+    margin: 0 auto 20px ;
+  }
+  .tekst-mob h1{
+    font-size: 16px;
+    display: block;
+  }
+  .tekst-mob .img{
+    margin-top: 15px;
+    width:  20px;
+    float: left;
+  }
+  .tekst-mob .img:nth-child(2){
+    margin: 0;
+    width:  250px;
+    float: left;
+  }
+  .tekst-mob img{
+    height: 10px;
   }
   .dots{
     display: none;

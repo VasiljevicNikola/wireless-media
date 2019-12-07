@@ -19,6 +19,19 @@
           </div>
         </div>
       </div>
+      <div class="tekst-mob">
+        <div class="img">
+          <img  class="" @click="" src="static/imgs/leftt.png" alt="">
+        </div>
+        <div class="img">
+          <h1>LOREM IPSUM DOLOR SIT</h1>
+        </div>
+
+        <div class="img">
+          <img  class="" @click="" src="static/imgs/right.png" alt="">
+        </div>
+
+      </div>
 
       <div class="main">
         <h2>WHO WE ARE</h2>
@@ -30,7 +43,7 @@
           <div class="opis">
             <p>Lorem ipsum</p>
             <br>
-            <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <p class="opis-2">Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
             <button type="button" name="button">SHOW MORE</button>
           </div>
 
@@ -41,11 +54,11 @@
           <div class="opis">
             <p>Lorem ipsum</p>
             <br>
-            <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <p class="opis-2">Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
             <button type="button" name="button">SHOW MORE</button>
           </div>
         </div>
-    
+
           <h2>WHAT WE DO</h2>
 
 
