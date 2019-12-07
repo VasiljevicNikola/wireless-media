@@ -5,7 +5,7 @@
   --zelenoplava:#429099;
   --plava:#1375b8;
   --siva:#f3f3f3;
-  --tamnosiva:#9d9d9c;
+  --tamnosiva:#7c7c7c;
 
 }
 html, body, *{
@@ -72,7 +72,7 @@ button:hover{
   background: var(--zutozelena)
 }
 .wrapper{
-  width: 768px;
+  max-width: 768px;
   margin: auto ;
 }
 /* Header start*/
@@ -80,6 +80,12 @@ header{
   clear: both;
   width: 100%;
   padding-top:25px;
+}
+.mob{
+  display: none;
+}
+.tablet{
+  display: none;
 }
 .logo{
   float: left;
@@ -126,7 +132,7 @@ router-link:hover,{
 .search:hover{
   cursor: pointer;
 }
-.search-input{
+.search-input input{
   position: absolute;
   top: 70px;
   right: 400px;
@@ -239,11 +245,10 @@ margin-bottom: 40px;
   padding: 0 40px;
   clear: both;
   overflow: hidden;
-  background: var(--siva);
+  background: #dbdbdb;
   height: 60px;
 }
 .left-pics{
-  width: 200px;
   float: left;
 }
 .footer  .nav{
@@ -262,23 +267,168 @@ margin-bottom: 40px;
 .pics{
   text-align: center;
   float: left;
-  margin: 10px;
+  margin: 10px 6px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: white;
 }
 .pics img{
-  margin: 7px auto;
-  height: 25px;
+  margin: 10px auto;
+  height: 20px;
 }
 .pics img:hover{
   cursor: pointer;
 }
 /* footer end */
 @media screen and (max-width:480px) {
-
+  .wrapper {
+  width: 480px
+  }
+  .logo {
+    width: 120px;
+    height: 40px;
+  }
+  .laptop{
+    display: none;
+  }
+  .tablet{
+    display: block;
+  }
+  .tablet img{
+    height: 24px;
+    float:left;
+    margin:0 15px
+  }
+  nav .nav{
+    margin:10px 0 0 30px;
+  }
+  .search img{
+    float: none;
+    margin: 15px 20px  0;
+  }
+.hero{
+  height: 195px
+}
+.hero .icon{
+  top: 30px;
+  width: 430px;
+}
+.icon img{
+  width: 133px;
+}
+.icon .tekst{
+  width: 275px;
+}
+h1{
+  font-size: 36px;
+  line-height: 50px;
+}
+.hero .icon{
+  left: 40px;
+}
+.hero .tackice{
+  top: 30px;
+}
+.search-input input{
+  top: 60px;
+  right: 0;
+}
+.dots{
+  left: 210px;
+}
+.footer nav{
+  display: none;
+}
 }
 @media screen and (max-width:320px) {
+  .icon img{
+    width: 100px
+  }
+  .hero .tackice {
+    top: 20px
+  }
+  .hero .tackice img{
+    width: 320px
+  }
+  .dots{
+    display: none;
+  }
+  #navi{
+    display: none;
+  }
+  .hero{
+    height: 120px
+  }
+  .hero .icon{
+    left: 100px;
+    top: 10px;
+    width: 100px;
+  }
+  .icon .tekst{
+    display: none;
+  }
+  .tablet{
+    display: none
+  }
+  .mob{
+    display: block;
+  }
+  .mob{
+    height: 30px;
+    width: fit-content;
+    float: left;
+    margin: 10px 0 0 100px;
+  }
+  .icon-mob{
+   width: 30px;
+   float: left;
+  }
+.icon-mob p{
+  font-size: 20px;
+}
+  .search img{
+    width: 18px;
+    margin: 0;
+  }
+  #navmob{
+  width: 100%;
+  z-index: 10000;
+  position: fixed;
+  top:70px;
+  left: 0;
+  transition: 1.3s all ease;
+  text-align: center;
+
+}
+#navmob li{
+  width: 100%;
+  transition: 1.3s all ease;
+  padding: 10px;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: 300;
+  font-size: 20px;
+}
+#navmob li:nth-child(1){
+  background: var(--zutozelena)
+}
+#navmob li:nth-child(2):hover{
+  background: var(--zelena)
+}
+#navmob li:nth-child(3){
+  background: var(--zelenoplava)
+}
+#navmob li:nth-child(4){
+  background: var(--plava)
+}
+#navmob li:hover:{
+  color: white;
+  background-color:var(--crvena);
+}
+#navmob li:active{
+  color: white;
+  background-color:var(--crvena);
+}
 
 }
